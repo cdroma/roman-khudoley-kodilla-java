@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -28,6 +29,10 @@ public class StreamMain {
         beautifier.beautify("gdansk university of technology", text -> text.toUpperCase());
         beautifier.beautify("QWERTY", text -> text.toLowerCase());
         beautifier.beautify("Justin Timberlake", text -> text.replace("Timberlake", "Biber"));
+        System.out.println("__________________________________________");
+
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
 
     }
 }
