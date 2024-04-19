@@ -1,6 +1,8 @@
 package com.kodilla.stream.forumuser;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Year;
 
 public class ForumUser {
     private final int userID;
@@ -36,6 +38,6 @@ public class ForumUser {
         return postsNumber;
     }
     public int getAge() {
-        return LocalDate.now().getYear() - birthday.getYear();
+        return LocalDate.now().minusYears(birthday.getYear()).minusDays(birthday.getDayOfYear()).getYear();
     }
 }

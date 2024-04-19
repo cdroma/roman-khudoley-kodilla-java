@@ -6,6 +6,7 @@ import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -41,7 +42,7 @@ public class StreamMain {
 
         Map<Integer, ForumUser> showMap = users.stream()
                 .filter(user -> user.getSex() == 'M')
-                .filter(user -> user.getAge() >= 20)
+                .filter(user -> Period.between(user.getBirthday(), LocalDate.now()).getYears() >= 20)
                 .filter(user -> user.getPostsNumber() >0)
                 .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
 
