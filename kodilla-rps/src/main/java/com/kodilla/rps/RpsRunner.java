@@ -12,7 +12,10 @@ public class RpsRunner {
         System.out.println("Now enter rounds to win your opponent....");
         int roundsToWin = scanner.nextInt();
 
-        Game game = new Game(playerName, roundsToWin);
+        Player computer = new Player("Evil computer");
+        Player player = new Player(playerName);
+
+        Game game = new Game(player, computer, roundsToWin);
 
         while (!game.gameOver()) {
             System.out.println("\nMake a choice...");

@@ -6,9 +6,9 @@ public class Game {
     private Player computer;
     private int roundsToWin;
 
-    public Game(String playerName, int roundsToWin) {
-        player = new Player(playerName);
-        computer = new Player("Evil Computer");
+    public Game(Player player, Player computer, int roundsToWin) {
+        this.player = player;
+        this.computer = computer;
         this.roundsToWin = roundsToWin;
     }
 
