@@ -13,7 +13,7 @@ public class BoardConfig {
     }
 
     @Bean
-    public Board board() {
-        return new Board(taskList(), taskList(), taskList());
+    public Board board(TaskList toDo, TaskList inProgress, TaskList done) {
+        return new Board(toDo, inProgress, done);
     }
 }
