@@ -18,10 +18,6 @@ public class Player {
         return score;
     }
 
-    public int getChoice() {
-        return choice;
-    }
-
     public void increaseScore() {
         score++;
     }
@@ -30,4 +26,3 @@ public class Player {
         this.choice = choice;
     }
 }
-
