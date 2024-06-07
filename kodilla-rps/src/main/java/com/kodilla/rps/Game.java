@@ -20,7 +20,6 @@ public class Game {
     }
 
     public void playRound(int playerChoice) {
-        player.setChoice(playerChoice);
         int computerChoice = generateComputerChoice();
         calculateWinner(playerChoice, computerChoice);
         showRoundResult(playerChoice, computerChoice);

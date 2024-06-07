@@ -3,7 +3,6 @@ package com.kodilla.rps;
 public class Player {
     private String name;
     private int score;
-    private int choice;
 
     public Player(String name) {
         this.name = name;
@@ -20,9 +19,5 @@ public class Player {
 
     public void increaseScore() {
         score++;
-    }
-
-    public void setChoice(int choice) {
-        this.choice = choice;
     }
 }
