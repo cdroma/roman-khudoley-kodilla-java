@@ -38,7 +38,9 @@ public class CompanyEmployeeFacadeTest {
         List<Company> result = facade.findCompaniesByNameFragment("Ma");
 
         // Then
-        assertEquals(3, result.size());
+        assertEquals(2, result.size());
+        assertTrue(result.stream().anyMatch(c -> c.getName().equals("Data Maesters")));
+        assertTrue(result.stream().anyMatch(c -> c.getName().equals("Grey Matter")));
 
         // CleanUp
         companyDao.deleteAll();

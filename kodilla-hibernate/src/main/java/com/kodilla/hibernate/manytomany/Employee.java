@@ -11,6 +11,10 @@ import java.util.List;
         @NamedQuery(
                 name = "Employee.findByLastName",
                 query = "SELECT e FROM Employee e WHERE e.lastname = :lastName"
+        ),
+        @NamedQuery(
+                name = "Employee.findByLastNameFragment",
+                query = "SELECT e FROM Employee e WHERE e.lastname LIKE :lastNameFragment"
         )
 })
 public class Employee {
@@ -73,5 +77,4 @@ public class Employee {
     private void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
-
 }

@@ -14,6 +14,12 @@ import java.util.List;
                 resultClass = Company.class
         )
 })
+@NamedQueries({
+        @NamedQuery(
+                name = "Company.findByNameFragment",
+                query = "SELECT c FROM Company c WHERE c.name LIKE :NAME"
+        )
+})
 public class Company {
 
     private int id;
